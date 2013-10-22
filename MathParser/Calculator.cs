@@ -9,13 +9,16 @@ namespace MathParser
 {
     public class Calculator
     {
-        private const string OperatorPattern = @"[a-zA-Z]";
-        private const string BinaryOperationPattern = @"[0-9]+[a-zA-Z]+[0-9]+";
+        private const string OperatorPattern = @"[a-d]";
+        private const string BinaryOperationPattern = @"[0-9]+[a-d]+[0-9]+";
+        private const string BracketOperationPattern = @"[e][0-9a-d]*[f]";
 
         private const string OperatorAddition = "a";
         private const string OperatorSubtraction = "b";
         private const string OperatorMultiplication = "c";
         private const string OperatorDivision = "d";
+        private const string OperatorOpeningBracket = "e";
+        private const string OperatorClosingBracket = "f";
 
         public string GetBinaryOperationResult(string input)
         {
@@ -53,6 +56,11 @@ namespace MathParser
             }
 
             return result;
+        }
+
+        public string GetBracketOperationResult(string input)
+        {
+            return "";
         }
     }
 }
