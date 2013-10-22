@@ -16,7 +16,7 @@ namespace MathParser
         private const string OperatorMultiplication = "c";
         private const string OperatorDivision = "d";
 
-        public string GetResult(string input)
+        public string GetBinaryOperationResult(string input)
         {
             var regex = Regex.Match(input, BinaryOperationPattern);
 
@@ -38,6 +38,11 @@ namespace MathParser
             {
                 return input;
             }
+        }
+
+        public string GetMultipleOperationResult(string input)
+        {
+            return "";
         }
     }
 }

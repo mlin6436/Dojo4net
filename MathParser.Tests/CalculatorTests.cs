@@ -19,10 +19,21 @@ namespace MathParser.Tests
         [TestCase("1b1", "0")]
         [TestCase("3c4", "12")]
         [TestCase("4d2", "2")]
-        public void GetResult_ShouldReturnCalculationResult(string input, string expected)
+        public void GetBinaryOperationResult_ShouldReturnCalculationResult(string input, string expected)
         {
             var calculator = new Calculator();
-            var result = calculator.GetResult(input);
+            var result = calculator.GetBinaryOperationResult(input);
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        [Test]
+        [TestCase("3a2c4", "20")]
+        [TestCase("32a2d2", "17")]
+        [TestCase("500a10b66c32", "14208")]
+        public void GetMultipleOperationResult_ShouldReturnCalculationResult(string input, string expected)
+        {
+            var calculator = new Calculator();
+            var result = calculator.GetMultipleOperationResult(input);
             Assert.That(result, Is.EqualTo(expected));
         }
     }
