@@ -89,7 +89,7 @@ namespace TaskScheduler.Tests
         }
 
         [Test]
-        [ExpectedException("Error - this is a cyclic dependency")]
+        [ExpectedException(ExpectedException = typeof(System.Exception), ExpectedMessage = "Error - this is a cyclic dependency")]
         public void GetTaskSchedulingResult_ShouldReturnScheduledTaskListWithCyclicDependency()
         {
             var a = new Task("a");
