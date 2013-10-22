@@ -87,5 +87,21 @@ namespace TaskScheduler.Tests
                 Assert.That(result[i].Name, Is.EqualTo(expected[i].Name));
             }
         }
+
+        [Test]
+        [ExpectedException("Error - this is a cyclic dependency")]
+        public void GetTaskSchedulingResult_ShouldReturnScheduledTaskListWithCyclicDependency()
+        {
+            var a = new Task("a");
+            var b = new Task("b");
+            var c = new Task("c");
+            var d = new Task("d");
+            a.Dependency = b;
+            b.Dependency = c;
+            c.Dependency = a;
+            var input = new List<Task>() { a, b, c, d };
+            var scheduler = new Scheduler();
+            var result = scheduler.GetTaskSchedulingResult(input);
+        }
     }
 }
