@@ -9,7 +9,8 @@ namespace MathParser
 {
     public class Calculator
     {
-        private const string BinaryOperationPattern = @"[a-zA-Z]";
+        private const string OperatorPattern = @"[a-zA-Z]";
+        private const string BinaryOperationPattern = @"[0-9]+[a-zA-Z]+[0-9]+";
 
         private const string OperatorAddition = "a";
         private const string OperatorSubtraction = "b";
@@ -18,7 +19,7 @@ namespace MathParser
 
         public string GetBinaryOperationResult(string input)
         {
-            var regex = Regex.Match(input, BinaryOperationPattern);
+            var regex = Regex.Match(input, OperatorPattern);
 
             if (regex.Success)
             {
@@ -42,7 +43,16 @@ namespace MathParser
 
         public string GetMultipleOperationResult(string input)
         {
-            return "";
+            var result = input;
+            var regex = Regex.Match(input, BinaryOperationPattern);
+
+            if (regex.Success)
+            {
+                result = GetBinaryOperationResult(regex.Value) + input.Substring(regex.Length);
+                return GetMultipleOperationResult(result);
+            }
+
+            return result;
         }
     }
 }
