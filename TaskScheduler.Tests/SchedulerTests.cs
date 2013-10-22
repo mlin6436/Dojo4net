@@ -50,5 +50,24 @@ namespace TaskScheduler.Tests
                 Assert.That(result[i].Name, Is.EqualTo(expected[i].Name));
             }
         }
+
+        [Test]
+        public void GetTaskSchedulingResult_ShouldReturnScheduledTaskListWithTaskADependsOnTaskBAndTaskCDependsTaskD()
+        {
+            var a = new Task("a");
+            var b = new Task("b");
+            var c = new Task("c");
+            var d = new Task("d");
+            a.Dependency = b;
+            c.Dependency = d;
+            var input = new List<Task>() { a, b, c, d };
+            var expected = new List<Task>() { b, a, d, c };
+            var scheduler = new Scheduler();
+            var result = scheduler.GetTaskSchedulingResult(input);
+            for (int i = 0; i < input.Count; i++)
+            {
+                Assert.That(result[i].Name, Is.EqualTo(expected[i].Name));
+            }
+        }
     }
 }
