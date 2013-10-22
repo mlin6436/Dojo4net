@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dojo4net", "Dojo4net\Dojo4net.csproj", "{AD174FB3-5180-4E29-A4D3-6B491E0332DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParser.Tests", "MathParser.Tests\MathParser.Tests.csproj", "{02EBF96F-AB50-46E5-9903-B271D3DE133A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParser", "MathParser\MathParser.csproj", "{AFBD3214-92A4-46FB-9D7D-033C9BA7BAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD174FB3-5180-4E29-A4D3-6B491E0332DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD174FB3-5180-4E29-A4D3-6B491E0332DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD174FB3-5180-4E29-A4D3-6B491E0332DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD174FB3-5180-4E29-A4D3-6B491E0332DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EBF96F-AB50-46E5-9903-B271D3DE133A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EBF96F-AB50-46E5-9903-B271D3DE133A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EBF96F-AB50-46E5-9903-B271D3DE133A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EBF96F-AB50-46E5-9903-B271D3DE133A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFBD3214-92A4-46FB-9D7D-033C9BA7BAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBD3214-92A4-46FB-9D7D-033C9BA7BAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBD3214-92A4-46FB-9D7D-033C9BA7BAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBD3214-92A4-46FB-9D7D-033C9BA7BAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
