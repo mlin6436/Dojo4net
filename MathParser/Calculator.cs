@@ -10,7 +10,7 @@ namespace MathParser
     {
         public string GetResult(string input)
         {
-            return "";
+            return input;
         }
     }
 }
