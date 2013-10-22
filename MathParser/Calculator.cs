@@ -8,5 +8,9 @@ namespace MathParser
 {
     public class Calculator
     {
+        public string GetResult(string input)
+        {
+            return "";
+        }
     }
 }
