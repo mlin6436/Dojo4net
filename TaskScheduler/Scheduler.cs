@@ -24,17 +24,22 @@ namespace TaskScheduler
                     continue;
                 }
 
-                GetDependency(result, input[i]);
+                GetDependency(result, input[i], input.Count);
             }
 
             return result;
         }
 
-        private Task GetDependency(List<Task> input, Task task)
+        private Task GetDependency(List<Task> input, Task task, int maxTaskNumber)
         {
+            if (maxTaskNumber-- == 0)
+            {
+                throw new Exception("Error - this is a cyclic dependency");
+            }
+
             if (task.Dependency != null)
             {
-                GetDependency(input, task.Dependency);
+                GetDependency(input, task.Dependency, maxTaskNumber);
             }
 
             input.Add(task);
