@@ -15,6 +15,10 @@ namespace MathParser.Tests
         [TestCase("0", "0")]
         [TestCase("1", "1")]
         [TestCase("11", "11")]
+        [TestCase("1a1", "2")]
+        [TestCase("1b1", "0")]
+        [TestCase("3c4", "12")]
+        [TestCase("4d2", "2")]
         public void GetResult_ShouldReturnCalculationResult(string input, string expected)
         {
             var calculator = new Calculator();
