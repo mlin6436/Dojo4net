@@ -60,7 +60,16 @@ namespace MathParser
 
         public string GetBracketOperationResult(string input)
         {
-            return "";
+            var result = input;
+            var regex = Regex.Match(input, BracketOperationPattern);
+
+            if (regex.Success)
+            {
+                result = input.Substring(0, regex.Index) + GetMultipleOperationResult(regex.Value.Replace(OperatorOpeningBracket, string.Empty).Replace(OperatorClosingBracket, string.Empty)) + input.Substring(regex.Index + regex.Length);
+                return GetBracketOperationResult(result);
+            }
+             
+            return GetMultipleOperationResult(input);
         }
     }
 }

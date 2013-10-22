@@ -29,7 +29,7 @@ namespace MathParser.Tests
         [Test]
         [TestCase("3a2c4", "20")]
         [TestCase("32a2d2", "17")]
-        [TestCase("500a10b66c32", "14208")]        
+        [TestCase("500a10b66c32", "14208")]
         public void GetMultipleOperationResult_ShouldReturnCalculationResult(string input, string expected)
         {
             var calculator = new Calculator();
@@ -43,7 +43,7 @@ namespace MathParser.Tests
         public void GetBracketOperationResult_ShouldReturnCalculationResult(string input, string expected)
         {
             var calculator = new Calculator();
-            var result = calculator.GetMultipleOperationResult(input);
+            var result = calculator.GetBracketOperationResult(input);
             Assert.That(result, Is.EqualTo(expected));
         }
     }
