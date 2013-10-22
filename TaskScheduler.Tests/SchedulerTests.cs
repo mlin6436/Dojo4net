@@ -31,7 +31,7 @@ namespace TaskScheduler.Tests
             var result = scheduler.GetTaskSchedulingResult(input);
             for (int i = 0; i < input.Count; i++)
             {
-                Assert.That(result[i], Is.EqualTo(expected[i]));
+                Assert.That(result[i].Name, Is.EqualTo(expected[i].Name));
             }
         }
     }

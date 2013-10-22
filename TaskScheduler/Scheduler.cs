@@ -8,9 +8,21 @@ namespace TaskScheduler
 {
     public class Scheduler
     {
-        public List<Task> GetTaskSchedulingResult(List<Task> list)
+        public List<Task> GetTaskSchedulingResult(List<Task> input)
         {
-            return null;
+            if (input == null)
+            {
+                return null;
+            }
+
+            var result = new List<Task>();
+
+            for (int i = 0; i < input.Count; i++ )
+            {
+                result.Add(input[i]);
+            }
+
+            return result;
         }
     }
 }
