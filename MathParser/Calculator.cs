@@ -38,10 +38,8 @@ namespace MathParser
                     default: return "0";
                 }
             }
-            else
-            {
-                return input;
-            }
+             
+            return input;
         }
 
         public string GetMultipleOperationResult(string input)
