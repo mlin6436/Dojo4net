@@ -17,12 +17,30 @@ namespace TaskScheduler
 
             var result = new List<Task>();
 
-            for (int i = 0; i < input.Count; i++ )
+            for (int i = 0; i < input.Count; i++)
             {
-                result.Add(input[i]);
+                if (result.Contains(input[i]))
+                {
+                    continue;
+                }
+
+                GetDependency(result, input[i]);
             }
 
             return result;
         }
+
+        private Task GetDependency(List<Task> input, Task task)
+        {
+            if (task.Dependency != null)
+            {
+                GetDependency(input, task.Dependency);
+            }
+
+            input.Add(task);
+
+            return task;
+        }
     }
 }
+
