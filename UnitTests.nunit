@@ -1,0 +1,15 @@
+<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="GraphicEditor.Tests\bin\Debug\GraphicEditor.Tests.dll" />
+    <assembly path="MathParser.Tests\bin\Debug\MathParser.Tests.dll" />
+	<assembly path="TaskScheduler.Tests\bin\Debug\TaskScheduler.Tests.dll" />
+	<assembly path="Roman.Tests\bin\Debug\Roman.Tests.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto">
+	<assembly path="GraphicEditor.Tests\bin\Release\GraphicEditor.Tests.dll" />
+    <assembly path="MathParser.Tests\bin\Release\MathParser.Tests.dll" />
+	<assembly path="TaskScheduler.Tests\bin\Release\TaskScheduler.Tests.dll" />
+	<assembly path="Roman.Tests\bin\Release\Roman.Tests.dll" />
+  </Config>
+</NUnitProject>
