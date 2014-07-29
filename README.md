@@ -1,4 +1,4 @@
 Dojo4net
 ========
 
-A Dojo for TDD
+A dojo for TDD in .NET
